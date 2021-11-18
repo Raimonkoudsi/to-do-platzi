@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/to-do-platzi/static/css/main.6a606d6a.chunk.css",
+    "main.js": "/to-do-platzi/static/js/main.7a55812c.chunk.js",
+    "main.js.map": "/to-do-platzi/static/js/main.7a55812c.chunk.js.map",
+    "runtime-main.js": "/to-do-platzi/static/js/runtime-main.94369a16.js",
+    "runtime-main.js.map": "/to-do-platzi/static/js/runtime-main.94369a16.js.map",
+    "static/js/2.7e7975ce.chunk.js": "/to-do-platzi/static/js/2.7e7975ce.chunk.js",
+    "static/js/2.7e7975ce.chunk.js.map": "/to-do-platzi/static/js/2.7e7975ce.chunk.js.map",
+    "index.html": "/to-do-platzi/index.html",
+    "static/css/main.6a606d6a.chunk.css.map": "/to-do-platzi/static/css/main.6a606d6a.chunk.css.map",
+    "static/js/2.7e7975ce.chunk.js.LICENSE.txt": "/to-do-platzi/static/js/2.7e7975ce.chunk.js.LICENSE.txt",
+    "static/media/TodoItem.scss": "/to-do-platzi/static/media/delete.2a6dcf09.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94369a16.js",
+    "static/js/2.7e7975ce.chunk.js",
+    "static/css/main.6a606d6a.chunk.css",
+    "static/js/main.7a55812c.chunk.js"
+  ]
+}
