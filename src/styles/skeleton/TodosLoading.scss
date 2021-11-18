@@ -1,0 +1,42 @@
+.loading-todo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    height: 72px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+
+    .loading-todo-text {
+        margin: 24px 0 24px 24px;
+        width: calc(100% - 120px);
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+
+.loading-todo-container,
+.loading-todo-complete-icon,
+.loading-todo-delete-icon {
+    background: linear-gradient(90deg, rgb(85, 85, 85), rgb(37, 37, 37));
+    background-size: 400% 400%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+
+@keyframes loadingAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

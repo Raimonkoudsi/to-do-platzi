@@ -1,0 +1,77 @@
+$roboto-slab: 'Roboto Slab', serif;
+
+form {
+    width: 90%;
+    max-width: 300px;
+    background-color: #1F1B24;
+    padding: 33px 40px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 16px;
+
+    label {
+        text-align: center;
+        font-weight: bold;
+        font-size: #1E1E1F;
+        margin-bottom: 26px;
+    }
+      
+    textarea {
+        background: #343136;
+        border: 1px, solid white;
+        border-radius: 2px;
+        box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 12px;
+        height: 96px;
+        width: calc(100%-25px);
+        resize: none;
+
+        &::placeholder {
+            color: #a5a5a5;
+            font-family: 'Montserrat';
+            font-weight: 400;
+        }
+    }
+      
+
+    .todo-form-button-container {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+
+        .todo-form-button {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 20px;
+            color: #202329;
+            font-weight: 400;
+            width: 120px;
+            height: 48px;
+            border-radius: 2px;
+            border: none;
+        }
+          
+        .todo-form-button-add {
+            background-color: green;
+            box-shadow: 0px 0px 10px rgba(97, 250, 135, 0.5);
+            color: white;
+            font-family: $roboto-slab;
+            margin: auto;
+        }
+          
+        .todo-form-button-cancel {
+            background: transparent;
+        }
+    }
+}

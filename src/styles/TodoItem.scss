@@ -1,0 +1,80 @@
+.todo-item {
+    background-color: #1F1B24;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+
+    .todo-item-p {
+        margin: 24px 0 24px 44px;
+        width: calc(100% - 120px);
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    .todo-item-p--complete {
+        opacity: 0.4;
+        text-decoration: line-through;
+    }
+      
+      .icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .icon-check {
+        position: absolute;
+        top: 6px;
+        left: 12px;
+      }
+
+      .check-img {
+        width: 3.55rem;
+        height: 3.55rem;
+        transition: 275ms ease;
+        -webkit-transition: 275ms ease;
+        -webkit-mask: url(../static/check.svg) no-repeat center;
+        mask: url(../static/check.svg) no-repeat center;
+        background-color: white;
+        cursor: pointer;
+        margin: auto;
+
+        &:hover {
+          background-color: green;
+        }
+      }
+
+      .icon-check--active > .check-img {
+        background-color: green;
+      }
+      
+      .delete-img {
+        width: 3.1rem;
+        height: 3.1rem;
+        transition: 275ms ease;
+        -webkit-transition: 275ms ease;
+        -webkit-mask: url(../static/delete.svg) no-repeat center;
+        mask: url(../static/delete.svg) no-repeat center;
+        background-color: white;
+        cursor: pointer;
+        margin: auto;
+
+        &:hover {
+          background-color: red;
+        }
+      }
+}

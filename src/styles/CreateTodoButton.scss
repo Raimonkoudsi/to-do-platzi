@@ -1,0 +1,32 @@
+.create-todo-button {
+    z-index: 1;
+    background-color: green;
+    box-shadow: 0px 0px 10px rgba(97, 250, 135, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+  
+    transform: rotate(0);
+    transition: .3s ease;
+
+    &.open-true {
+        transform: rotate(224deg);
+        background-color: rgb(180, 2, 2);
+        box-shadow: 0px 0px 10px rgba(226, 112, 112, 0.5);
+    }
+
+    &.open-false {
+        transform: rotate(0);
+    }
+}
