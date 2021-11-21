@@ -12,6 +12,7 @@ import TodoItem from "../components/TodoItem";
 import CreateTodoButton from "../components/CreateTodoButton";
 import Modal from "../components/Modal";
 import TodoForm from '../components/TodoForm';
+import TodoHeader from '../components/TodoHeader';
 
 //skeleton
 import TodosError from "../components/skeleton/TodosError";
@@ -29,15 +30,28 @@ const AppUI = () => {
     completeTodo, 
     deleteTodo,
     openModal,
-    setOpenModal
+    setOpenModal,
+    totalTodos,
+    completedTodos,
+    search,
+    setSearch
   } = useContext(TodoContext);
 
     return (
         <React.Fragment>
 
-        <TodoCounter />
+        <TodoHeader>
+          <TodoCounter 
+            totalTodos = {totalTodos}
+            completedTodos = {completedTodos}
+          />
 
-        <TodoSearch />
+          <TodoSearch
+            search= {search}
+            setSearch = {setSearch}
+          />
+        </TodoHeader>
+
 
         <TodoList>
           {/*si hubo error*/}

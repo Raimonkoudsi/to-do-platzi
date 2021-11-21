@@ -2,16 +2,16 @@ import React, {useContext} from 'react';
 import "../styles/TodoCounter.scss";
 
 //context
-import { TodoContext } from '../context/TodoContext';
+//import { TodoContext } from '../context/TodoContext';
 
 
-const TodoCounter = () => {
+const TodoCounter = ({ totalTodos, completedTodos }) => {
 
     //datos del todocontext
-    const { 
-        totalTodos, 
-        completedTodos
-    } = useContext(TodoContext);
+    //const { 
+    //    totalTodos, 
+    //    completedTodos
+    //} = useContext(TodoContext);
 
     return (
         <h2 className="todo-counter">
