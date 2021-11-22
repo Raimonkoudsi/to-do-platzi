@@ -2,18 +2,21 @@ import React, {useContext, useState} from 'react';
 import "../styles/TodoForm.scss";
 
 //context
-import {TodoContext} from "../context/TodoContext";
+//import {TodoContext} from "../hooks/useTodos";
 
 
-const TodoForm = () => {
+const TodoForm = ({
+    insertTodo,
+    setOpenModal
+}) => {
 
     const [newTodoValue, setNewTodoValue] = useState('');
 
     //datos del todocontext
-    const {
-        insertTodo,
-        setOpenModal
-    } = useContext(TodoContext);
+    //const {
+    //    insertTodo,
+    //    setOpenModal
+    //} = useContext(TodoContext);
 
 
     const onChange = (event) => {

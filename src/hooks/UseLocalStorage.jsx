@@ -2,9 +2,13 @@ import React, {useState, useEffect} from "react";
 
 const useLocalStorage = (itemName, initialValue) => {
 
+    //para saber si el storage esta sincronizado con las vistas
+    const [sincronizedItem, setSincronizedItem] = useState(true);
+
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
   
+
     //lista de todos
     const [item, setItem] = useState(initialValue);
   
@@ -25,13 +29,15 @@ const useLocalStorage = (itemName, initialValue) => {
     
           setItem(parsedItem);
           setLoading(false);
+
+          setSincronizedItem(true);
   
         } catch(error) {
           setError(error);
         }
   
-      }, 1000);
-    }, [])
+      }, 3000);
+    }, [sincronizedItem]);
   
     //actualizar el localstorage
     const saveItem = (newItem) => {
@@ -46,12 +52,18 @@ const useLocalStorage = (itemName, initialValue) => {
       }
   
     };
+
+    const sincronizeItem = () => {
+      setLoading(true);
+      setSincronizedItem(false);
+    }
   
     return {
       item, //recibir
       saveItem, //actualizar
       loading, //cargando
-      error //error
+      error, //error
+      sincronizeItem //sincroniza los items en las demas vistas
     };
 }
 

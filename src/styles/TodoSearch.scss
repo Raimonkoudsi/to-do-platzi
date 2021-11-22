@@ -25,4 +25,8 @@
         color: white;
         outline-color: white;
     }
+
+    &:disabled {
+        opacity: 25%;
+    }
 }

@@ -1,0 +1,53 @@
+$roboto-slab: 'Roboto Slab', serif;
+
+.message-box-container {
+    z-index: 2;
+  
+    width: 90%;
+    max-width: 300px;
+    background-color: #1F1B24;
+    padding: 33px 40px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 16px;
+
+    label {
+        text-align: center;
+        font-weight: bold;
+        font-size: #1E1E1F;
+        margin-bottom: 26px;
+    }
+
+    .message-box-button-container {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+
+        .message-box-button {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 20px;
+            color: #202329;
+            font-weight: 400;
+            width: 120px;
+            height: 48px;
+            border-radius: 2px;
+            border: none;
+
+            background-color: green;
+            box-shadow: 0px 0px 10px rgba(97, 250, 135, 0.5);
+            color: white;
+            font-family: $roboto-slab;
+            margin: auto;
+            cursor: pointer;
+        }
+    }
+}

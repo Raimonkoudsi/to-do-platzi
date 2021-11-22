@@ -1,20 +1,25 @@
 import React from 'react';
 import "../styles/CreateTodoButton.scss";
 
-const CreateTodoButton = ({ openModal, setOpenModal }) => {
+const CreateTodoButton = ({ openModal, setOpenModal, storageChange }) => {
 
     const toggleButton = () => {
         setOpenModal(prevState => !prevState);
     }
 
-    return (
-        <button 
-            className={`create-todo-button open-${openModal}`}
-            onClick={toggleButton}
-        >
-            +
-        </button>
-    )
+    if (!storageChange) {
+        return (
+            <button 
+                className={`create-todo-button open-${openModal}`}
+                onClick={toggleButton}
+            >
+                +
+            </button>
+        )
+    } else {
+        return null;
+    }
+
 }
 
 export default CreateTodoButton;

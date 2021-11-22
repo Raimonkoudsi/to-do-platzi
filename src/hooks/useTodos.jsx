@@ -1,19 +1,21 @@
-import React, {useState, createContext} from "react";
+import {useState} from "react";
 
 //hooks
-import useLocalStorage from "../hooks/UseLocalStorage";
-
-const TodoContext = createContext();
+import useLocalStorage from "./useLocalStorage";
 
 
-const TodoProvider = (props) => {
+const useTodos = () => {
 
     const{
         item: todos, //se renombran
         saveItem: saveTodos, //se renombran
+        sincronizeItem: sincronizeTodos, //se renombran
         loading,
         error
     } = useLocalStorage('TODOS_V1', []);
+
+    //cuando se tiene que actualizar en otra pagina los datos
+    const [storageChange, setStorageChange] = useState(false);
     
     //completados
     const completedTodos = todos.filter(todo => todo.completed).length;
@@ -74,8 +76,7 @@ const TodoProvider = (props) => {
     }
     
 
-    return(
-        <TodoContext.Provider value={{
+    return {
             loading,
             error,
             totalTodos,
@@ -87,11 +88,11 @@ const TodoProvider = (props) => {
             completeTodo,
             deleteTodo,
             openModal,
-            setOpenModal
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    );
+            setOpenModal,
+            sincronizeTodos,
+            storageChange,
+            setStorageChange
+        };
 }
 
-export { TodoContext, TodoProvider };
+export default useTodos;

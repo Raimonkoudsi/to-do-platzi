@@ -4,7 +4,7 @@ import "../styles/TodoSearch.scss";
 //context
 //import { TodoContext } from '../context/TodoContext';
 
-const TodoSearch = ({ search, setSearch }) => {
+const TodoSearch = ({ search, setSearch, loading }) => {
 
     //datos del todocontext
     //const { 
@@ -22,6 +22,7 @@ const TodoSearch = ({ search, setSearch }) => {
             placeholder="Buscar . . ."
             value={search}
             onChange={onChangeValue}
+            disabled={loading}
         />
     )
 }
